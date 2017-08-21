@@ -2,6 +2,9 @@ import React from 'react';
 import { BrowserRouter, Switch, Route, Link } from 'react-router-dom'
 import './App.css';
 
+/*
+ * Form for search users
+ */
 class SearchForm extends React.Component {
     render() {
         return (
@@ -12,6 +15,9 @@ class SearchForm extends React.Component {
     }
 }
 
+/*
+ * Result list of users
+ */
 class List extends React.Component {
     render() {
         return (
@@ -24,6 +30,10 @@ class List extends React.Component {
     }
 }
 
+/*
+ * Main component of the first step
+ * Contains search form (<SearchForm />) and result list of users (<List />)
+ */
 class UserList extends React.Component {
     
     constructor(props){
@@ -67,6 +77,9 @@ class UserList extends React.Component {
     }
 }
 
+/*
+ * Main component of the second step
+ */
 class UserForm extends React.Component {
 
     constructor(props){
@@ -84,7 +97,7 @@ class UserForm extends React.Component {
                 .then((r) => this.setState({user: r[0]}))
     }
     
-    render() {console.log(this.state.user)
+    render() {
         if (this.state.user)
             return (
                 <div className="col-xs-12 col-md-6">
@@ -107,6 +120,9 @@ class UserForm extends React.Component {
     }
 }
 
+/*
+ * Root component
+ */
 class App extends React.Component {
 
     render() {
