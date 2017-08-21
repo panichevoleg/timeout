@@ -1,0 +1,7 @@
+.list-group li{
+    list-style: none;
+}
+
+dd{
+    margin: 0 0 7px 20px;
+}
